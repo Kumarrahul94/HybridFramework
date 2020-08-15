@@ -18,16 +18,13 @@ import freemarker.log.Logger;
 public class BasePage {
 	
 	public WebDriver driver;
-	public ExtentReports report;
-	public ExtentTest logger;
+
 	
 	
 	@BeforeSuite
 	public void setUpSuite() {
 		//Extent Report
-		ExtentSparkReporter extent = new ExtentSparkReporter(new File(System.getProperty("user.dir")+ "/Reports/CRM.html"));
-		report = new ExtentReports();
-		report.attachReporter(extent);
+
 	}
 	
 	@BeforeClass
