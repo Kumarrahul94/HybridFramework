@@ -14,6 +14,7 @@ public class VerifyFindByLoginPage extends BasePage{
 	@Test
 	public void checkValidateUser() {
 		
+		System.out.println("Performing git action");
 		logger = report.createTest("Login to CRM");
 		LoginPageFindBy login = PageFactory.initElements(driver, LoginPageFindBy.class);
 		
@@ -21,6 +22,8 @@ public class VerifyFindByLoginPage extends BasePage{
 		login.login_wordpress("admin","demo123");
 		
 		logger.pass("Logged In Successully");
+		
+		System.out.println("Test Case Ended");
 	}	
 	
 }
